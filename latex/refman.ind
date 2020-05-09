@@ -1,0 +1,101 @@
+\begin{theindex}
+
+  \item {\+\_\+\+\_\+init\+\_\+\+\_\+}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{6}
+    \subitem {pos\+\_\+adt\+::\+G\+PosT}, \hyperpage{10}
+
+  \indexspace
+
+  \item {add\+\_\+days}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{6}
+  \item {after}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{7}
+  \item {arrival\+\_\+date}
+    \subitem {pos\+\_\+adt\+::\+G\+PosT}, \hyperpage{11}
+
+  \indexspace
+
+  \item {before}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{7}
+
+  \indexspace
+
+  \item {date\+\_\+adt.\+DateT}, \hyperpage{5}
+  \item {date\+\_\+adt\+::\+DateT}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{6}
+    \subitem {add\+\_\+days}, \hyperpage{6}
+    \subitem {after}, \hyperpage{7}
+    \subitem {before}, \hyperpage{7}
+    \subitem {day}, \hyperpage{7}
+    \subitem {days\+\_\+between}, \hyperpage{8}
+    \subitem {equal}, \hyperpage{8}
+    \subitem {month}, \hyperpage{8}
+    \subitem {next}, \hyperpage{9}
+    \subitem {prev}, \hyperpage{9}
+    \subitem {year}, \hyperpage{9}
+  \item {day}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{7}
+  \item {days\+\_\+between}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{8}
+  \item {distance}
+    \subitem {pos\+\_\+adt\+::\+G\+PosT}, \hyperpage{11}
+
+  \indexspace
+
+  \item {equal}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{8}
+    \subitem {pos\+\_\+adt\+::\+G\+PosT}, \hyperpage{12}
+
+  \indexspace
+
+  \item {latitude}
+    \subitem {pos\+\_\+adt\+::\+G\+PosT}, \hyperpage{12}
+  \item {longitude}
+    \subitem {pos\+\_\+adt\+::\+G\+PosT}, \hyperpage{12}
+
+  \indexspace
+
+  \item {month}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{8}
+  \item {move}
+    \subitem {pos\+\_\+adt\+::\+G\+PosT}, \hyperpage{12}
+
+  \indexspace
+
+  \item {next}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{9}
+  \item {north\+\_\+of}
+    \subitem {pos\+\_\+adt\+::\+G\+PosT}, \hyperpage{13}
+
+  \indexspace
+
+  \item {pos\+\_\+adt.\+G\+PosT}, \hyperpage{10}
+  \item {pos\+\_\+adt\+::\+G\+PosT}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{10}
+    \subitem {arrival\+\_\+date}, \hyperpage{11}
+    \subitem {distance}, \hyperpage{11}
+    \subitem {equal}, \hyperpage{12}
+    \subitem {latitude}, \hyperpage{12}
+    \subitem {longitude}, \hyperpage{12}
+    \subitem {move}, \hyperpage{12}
+    \subitem {north\+\_\+of}, \hyperpage{13}
+    \subitem {west\+\_\+of}, \hyperpage{13}
+  \item {prev}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{9}
+
+  \indexspace
+
+  \item {src/date\+\_\+adt.\+py}, \hyperpage{15}
+  \item {src/pos\+\_\+adt.\+py}, \hyperpage{15}
+
+  \indexspace
+
+  \item {west\+\_\+of}
+    \subitem {pos\+\_\+adt\+::\+G\+PosT}, \hyperpage{13}
+
+  \indexspace
+
+  \item {year}
+    \subitem {date\+\_\+adt\+::\+DateT}, \hyperpage{9}
+
+\end{theindex}

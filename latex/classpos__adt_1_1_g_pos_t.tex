@@ -1,0 +1,207 @@
+\hypertarget{classpos__adt_1_1_g_pos_t}{}\section{pos\+\_\+adt.\+G\+PosT Class Reference}
+\label{classpos__adt_1_1_g_pos_t}\index{pos\+\_\+adt.\+G\+PosT@{pos\+\_\+adt.\+G\+PosT}}
+
+
+An A\+DT for the class \hyperlink{classpos__adt_1_1_g_pos_t}{G\+PosT}.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classpos__adt_1_1_g_pos_t_afedced57a1fc21337f8b67b5cf22b3bd}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, phi, lam)
+\begin{DoxyCompactList}\small\item\em A constructor for the \hyperlink{classpos__adt_1_1_g_pos_t}{G\+PosT} class. \end{DoxyCompactList}\item 
+def \hyperlink{classpos__adt_1_1_g_pos_t_a5e33788ed4070f65c646eb7269f29eff}{latitude} (self)
+\begin{DoxyCompactList}\small\item\em A getter method for the latitude. \end{DoxyCompactList}\item 
+def \hyperlink{classpos__adt_1_1_g_pos_t_a7af546bfe3e2decc2e82105ab479e179}{longitude} (self)
+\begin{DoxyCompactList}\small\item\em A getter method for the longitude. \end{DoxyCompactList}\item 
+def \hyperlink{classpos__adt_1_1_g_pos_t_a89baaed8a97b6b3eeba5aeea866c888e}{west\+\_\+of} (self, p)
+\begin{DoxyCompactList}\small\item\em Compares if a position is west of the current position. \end{DoxyCompactList}\item 
+def \hyperlink{classpos__adt_1_1_g_pos_t_adb5cfeefc3c133895289d3507e7a14f7}{north\+\_\+of} (self, p)
+\begin{DoxyCompactList}\small\item\em Compares if a position is north of the current position. \end{DoxyCompactList}\item 
+def \hyperlink{classpos__adt_1_1_g_pos_t_a07040d59fe466b24738749cf40c6a965}{equal} (self, p)
+\begin{DoxyCompactList}\small\item\em Checks if two positions are equal. \end{DoxyCompactList}\item 
+def \hyperlink{classpos__adt_1_1_g_pos_t_ac073f4ce8d6a10a6325c5f667ea0c2a3}{move} (self, b, d)
+\begin{DoxyCompactList}\small\item\em Moves the current \hyperlink{classpos__adt_1_1_g_pos_t}{G\+PosT} object to a new position. \end{DoxyCompactList}\item 
+def \hyperlink{classpos__adt_1_1_g_pos_t_ad09472793d0194e188f76679af84e734}{distance} (self, p)
+\begin{DoxyCompactList}\small\item\em Calculates distance between the current object and point p. \end{DoxyCompactList}\item 
+def \hyperlink{classpos__adt_1_1_g_pos_t_a5a92fc2c750bc5fda289e7fbfb98bdf6}{arrival\+\_\+date} (self, p, d, s)
+\begin{DoxyCompactList}\small\item\em Calculates the date of arrival for someone starting at the current position on date d and moving to position p at speed s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_a28e8638525d9c5eabe69ecc6a23a3fb3}\label{classpos__adt_1_1_g_pos_t_a28e8638525d9c5eabe69ecc6a23a3fb3}} 
+{\bfseries phi}
+\item 
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_a4ea18baeb6cb8df8c565edc97e477c53}\label{classpos__adt_1_1_g_pos_t_a4ea18baeb6cb8df8c565edc97e477c53}} 
+{\bfseries lam}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An A\+DT for the class \hyperlink{classpos__adt_1_1_g_pos_t}{G\+PosT}. 
+
+Some assumptions made include that the latitude or longitude is between -\/90 and 90 degrees. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_afedced57a1fc21337f8b67b5cf22b3bd}\label{classpos__adt_1_1_g_pos_t_afedced57a1fc21337f8b67b5cf22b3bd}} 
+\index{pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def pos\+\_\+adt.\+G\+Pos\+T.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{phi,  }\item[{}]{lam }\end{DoxyParamCaption})}
+
+
+
+A constructor for the \hyperlink{classpos__adt_1_1_g_pos_t}{G\+PosT} class. 
+
+Initializes the attributes of the \hyperlink{classpos__adt_1_1_g_pos_t}{G\+PosT} objects. 
+\begin{DoxyParams}{Parameters}
+{\em phi} & represents the latitude \\
+\hline
+{\em lam} & represents the longitude \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_a5a92fc2c750bc5fda289e7fbfb98bdf6}\label{classpos__adt_1_1_g_pos_t_a5a92fc2c750bc5fda289e7fbfb98bdf6}} 
+\index{pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}!arrival\+\_\+date@{arrival\+\_\+date}}
+\index{arrival\+\_\+date@{arrival\+\_\+date}!pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}}
+\subsubsection{\texorpdfstring{arrival\+\_\+date()}{arrival\_date()}}
+{\footnotesize\ttfamily def pos\+\_\+adt.\+G\+Pos\+T.\+arrival\+\_\+date (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p,  }\item[{}]{d,  }\item[{}]{s }\end{DoxyParamCaption})}
+
+
+
+Calculates the date of arrival for someone starting at the current position on date d and moving to position p at speed s. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & represents the end position \\
+\hline
+{\em d} & represents the date the travel starts \\
+\hline
+{\em s} & represents the speed of travel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The date of arrival (a DateT object) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_ad09472793d0194e188f76679af84e734}\label{classpos__adt_1_1_g_pos_t_ad09472793d0194e188f76679af84e734}} 
+\index{pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}!distance@{distance}}
+\index{distance@{distance}!pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}}
+\subsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily def pos\+\_\+adt.\+G\+Pos\+T.\+distance (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p }\end{DoxyParamCaption})}
+
+
+
+Calculates distance between the current object and point p. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & represents the point to calculate the distance to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance between the two positions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_a07040d59fe466b24738749cf40c6a965}\label{classpos__adt_1_1_g_pos_t_a07040d59fe466b24738749cf40c6a965}} 
+\index{pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}!equal@{equal}}
+\index{equal@{equal}!pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}}
+\subsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily def pos\+\_\+adt.\+G\+Pos\+T.\+equal (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p }\end{DoxyParamCaption})}
+
+
+
+Checks if two positions are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & represents position to be compared to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they are equal (or within 1 km away from each other), False if they are not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_a5e33788ed4070f65c646eb7269f29eff}\label{classpos__adt_1_1_g_pos_t_a5e33788ed4070f65c646eb7269f29eff}} 
+\index{pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}!latitude@{latitude}}
+\index{latitude@{latitude}!pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}}
+\subsubsection{\texorpdfstring{latitude()}{latitude()}}
+{\footnotesize\ttfamily def pos\+\_\+adt.\+G\+Pos\+T.\+latitude (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+A getter method for the latitude. 
+
+\begin{DoxyReturn}{Returns}
+The latitude 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_a7af546bfe3e2decc2e82105ab479e179}\label{classpos__adt_1_1_g_pos_t_a7af546bfe3e2decc2e82105ab479e179}} 
+\index{pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}!longitude@{longitude}}
+\index{longitude@{longitude}!pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}}
+\subsubsection{\texorpdfstring{longitude()}{longitude()}}
+{\footnotesize\ttfamily def pos\+\_\+adt.\+G\+Pos\+T.\+longitude (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+A getter method for the longitude. 
+
+\begin{DoxyReturn}{Returns}
+The longitude 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_ac073f4ce8d6a10a6325c5f667ea0c2a3}\label{classpos__adt_1_1_g_pos_t_ac073f4ce8d6a10a6325c5f667ea0c2a3}} 
+\index{pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}!move@{move}}
+\index{move@{move}!pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily def pos\+\_\+adt.\+G\+Pos\+T.\+move (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{b,  }\item[{}]{d }\end{DoxyParamCaption})}
+
+
+
+Moves the current \hyperlink{classpos__adt_1_1_g_pos_t}{G\+PosT} object to a new position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & represents bearing to be moved towards \\
+\hline
+{\em d} & represents distance to be moved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_adb5cfeefc3c133895289d3507e7a14f7}\label{classpos__adt_1_1_g_pos_t_adb5cfeefc3c133895289d3507e7a14f7}} 
+\index{pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}!north\+\_\+of@{north\+\_\+of}}
+\index{north\+\_\+of@{north\+\_\+of}!pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}}
+\subsubsection{\texorpdfstring{north\+\_\+of()}{north\_of()}}
+{\footnotesize\ttfamily def pos\+\_\+adt.\+G\+Pos\+T.\+north\+\_\+of (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p }\end{DoxyParamCaption})}
+
+
+
+Compares if a position is north of the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & represents position to be compared to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it is north of, False is not north of 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpos__adt_1_1_g_pos_t_a89baaed8a97b6b3eeba5aeea866c888e}\label{classpos__adt_1_1_g_pos_t_a89baaed8a97b6b3eeba5aeea866c888e}} 
+\index{pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}!west\+\_\+of@{west\+\_\+of}}
+\index{west\+\_\+of@{west\+\_\+of}!pos\+\_\+adt\+::\+G\+PosT@{pos\+\_\+adt\+::\+G\+PosT}}
+\subsubsection{\texorpdfstring{west\+\_\+of()}{west\_of()}}
+{\footnotesize\ttfamily def pos\+\_\+adt.\+G\+Pos\+T.\+west\+\_\+of (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{p }\end{DoxyParamCaption})}
+
+
+
+Compares if a position is west of the current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & represents position to be compared to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if it is west of, False if not west of 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{pos__adt_8py}{pos\+\_\+adt.\+py}\end{DoxyCompactItemize}

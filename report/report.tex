@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{gensymb}
+
+\oddsidemargin 0mm
+\evensidemargin 0mm
+\textwidth 160mm
+\textheight 200mm
+
+\pagestyle {plain}
+\pagenumbering{arabic}
+
+\newcounter{stepnum}
+
+\title{Assignment 1 Report}
+\author{Yousam Asham ashamy1}
+\date{January 23, 2020}
+
+\begin {document}
+
+\maketitle
+
+This report outlines two different versions of \textit{date\_adt.py} and \textit{pos\_adt.py}: my implementation, and my partner's implementation. My implementation of a test driver will be used to test the partner's implementation and the results will be discussed in this report, as well as answering some questions related to why these results are the way they are. In addition, some design questions will be answered, as well as my opinion about the given design specification.
+
+\section{Testing of the Original Program}
+
+        The test driver was made using a combination of test cases as well as \verb|if|, \verb|assert|, and \verb|print| statements. A counter of the amount of methods that passed from each of the \verb|DateT| and \verb|GPosT| modules. This was a development of an earlier approach, which only consisted of \verb|if| statements and a counter. This was changed since using \verb|assert| statements would give an error message indicating where the \verb|assert| statement has failed. In \verb|GPosT| though, this approach was changed since I realized the old approach was not as effective as only using \verb|assert| and \verb|print| statements.\\
+
+        The test cases used for \verb|DateT| were picked to ensure testing for leap years, the month of february (since it is an exception), the month of february during leap years, the ends and beginning of months. These test cases also include one normal date to make sure the non-edge cases work. The ends of the month of february is considered to be edge cases since they change with every leap year.\\
+
+        As for the test case selection for \verb|GPosT|, it was hard to find edge cases other than the mixing of signs of latitude and longitude, and having them gradually get close to around $90$ or $-90$. I also found it hard to test the \verb|GPosT| module due to my limited background knowledge of how latitude and longitude work.\\
+
+        My implementation's results were as expected, the methods worked as tested, but this was because they were tested individually after their initial type-up. This was done so that troubleshooting would be easier later on during the process of testing.\\
+
+        Throughout testing, lots of problems were encountered such as rounding and accuracy of my methods. The rounding problem was fixed by rounding the output to four decimal places and comparing it to the correct answer that was also rounded to four decimal places. Also some problems arose with the confusion in the \verb|arrival_date| method. The confusion arose when some cases had 1 day and 24 hours of travel. Due to these kinds of cases or scenarios, some assumptions had to be added:\\
+
+\begin{itemize}
+
+	\item \textit{pos\_adt.py: arrival\_date} \textemdash  date of departure to always start at time 00:00:00, or midnight.
+
+	\item \textit{date\_adt.py: \_\_init\_\_} \textemdash  User will always be inputting a correct AD date.
+
+	\item \textit{date\_adt.py: equal} \textemdash A dateT object is equal to another dateT object \textit{if and only if} they represent the same date.
+
+	\item \textit{date\_adt.py: days\_between} \textemdash I assumed that there are no such thing such as negative days, and converted all differences to an absolute value before returning them.
+
+\end{itemize}
+
+        After testing my partner's code, I found out a mistake that I have made in my own program. The getter methods for my \verb|GPosT| module were given wrong names in my own version of \verb|GPosT| (my mehtods were called \verb|latitude| and \verb|longitude|, when they were supposed to called \verb|lat| and \verb|long|, respectively). I fixed the my \verb|test_driver.py| and my \verb|GPosT| module prior to starting to test my partner's code.
+
+\section{Results of Testing Partner's Code}
+
+        The first time I ran my partner's code I found out about one of \textit{my} errors that I have explained in the previous paragraph. This mistake was then fixed and testing was allowed to proceed.\\
+
+        My partner's \verb|before|, \verb|after|, and \verb|equal| methods did not pass. This is due to some errors made in my partner's logic in the \verb|if| statements.\\        
+
+        I then ran into an assertion error that did not allow the testing to go on, and so I had to fix this error. This assertion error was due to my program not converting the \verb|move| method output back to degrees. Once I added these lines, the answers were similar to each other and allowed the testing to pass. I also made a mistake where I was converting to radians when I did not need to. This mistake was also another reason that the assertion error arose.\\
+
+        However, after those errors, both versions' test results were consistent with each other. They both passed the test driver.\\
+
+\section{Critique of Given Design Specification}
+
+        What I liked about this design was the separation of the modules. This alluded the \textit{separation of concerns} principle. It made it easier to target the methods that had to be fixed when testing failed. This separation of concerns, although is not the goal for it, made this assignment feel much more organized than other tasks or assignments I had to write before for other courses. Moreover, having more than one module helped to organize the test driver and show how both modules can be incorporated together in a method like the \verb|arrival_date| method in the \verb|GPosT| module.\\
+
+        A drawback of this design specification is how generalized it is. Many assumptions had to be made, this allowed for discrepancies between the versions. For example, in the \verb|equal| method in the \verb|GPosT| module, my partner's version did not compare the latitude and longitude values of the current position object to the comparable object. Instead, they went directly to calculating the distance between them (and checking whether it is less than 1). Another drawback includes the unaddressed state variables (the attributes/fields of each module). For example, some versions imported and used the \verb|datetime| module while other did not. The way the date objects are stored in the \verb|datetime| module is, for example, different than the way I stored them. Because of that, whenever I had to use the \verb|datetime| module, I had to create a new object. 
+
+\section{Answers to Questions}
+
+\begin{enumerate}[(a)]
+
+\item Some options for the state variables for the \verb|DateT| could be a unix timestamp. A unix timestamp is a large number that houses the number of seconds since the date of January 1st 1970. Since this would only allow for a limited amount of dates to be inputed, one could implement that a negative timestamp would be the amount of seconds before that date to achieve the range of dates before January 1st 1970. Another option for the state variables for \verb|DateT| would be a modulo representation of the day, given the month and the year. For example, the day passed would be 132, month would be 8, and year would be 2020. This would translate to a date that is in the form (132\%31/8/2020) which would evaluate to the date (08/08/2020). The month and year could also be entered as number greater than 12 or 3000.
+
+        The longitude and latitude could be represented in sexagesimal degrees format (eg: $40^{\circ} 20' 46''$N), this would allow for a better reason for the string format to be used as the state variable in the \verb|GPosT| module. Also, a coordinate system in 3 dimensions could be used to input the latitude and longitude.\\
+
+\item The \verb|DateT| and \verb|GPosT| objects are \textit{mutable}. This is mainly due to the fact that they could be accessed from outside the module. One could make them private and when that is done, they can only view the object fields through the getter methods. The specification of this assignment did not state that the object variables are to be private (using the double underscore python convention). If this was indicated in the assignment, then the objects of both modules would be private and therefore \textit{immutable}.\\
+
+\item The unit testing framework \verb|pytest| would be beneficial in the future since it automatically counts how many of your test passed instead of counting them manually and printing them to the user. It also allows code execution to continue after an assert statement has failed. To sum up, it is a more automated way of testing modules in python and ensures a way of running all test cases even if an \verb|assert| statement fails to make sure that the tester is always left with complete test results after running the test driver.\\
+
+\item Some examples of software engineering failures include \textit{NASA's Mars Climate Orbiter} and the \textit{EDS Child Support System}. The NASA Mars Climate Orbiter was a spacecraft that was lost in space due to an engineer that failed to make a conversion between imperial units to metric units, as a result, the spacecraft was hurtled through space and was stuck in orbit around the sun.
+
+        The EDS Child Support System created software that was extremely incomopatible and resulted in the overpayment and underpayment of millions of people's child support payments. This issue has costed the UK taxpayers over a billion US dollars to this day.
+
+        Software quality is a challenge to this day due to industry thinking that it reduces agility and the amount of thought developers are able to put into the task. It is thought to reduce agility by causing the developers to focus more on the documentation of the processes which makes them less flexible. Reduced thought causes a barrier to innovation since programs have to pass a specific quality plan which distracts from creativity and the formation of new ideas that are not able to pass easily. Another factor that demotivates software quality and testing is the funds and monetary associated with software testing. Some solutions to address the challenge of software quality could be emphasis on early testing, plan for a changeable and long-term environment, and having the attitude of developing products and not projects.\\
+
+\item The Rational Design Process is a process by which software should be designed. It starts with the documentation of requirements, followed by doocumentation of the module structures, design and documentation of the interface and its internal structures, writing the programs, and finally maintain the programs. \textit{Faking a rational design process} refers to the documentation we would  produce if we had followed an ideal process. This "faking" would happen when we have identified an ideal process but cannot follow it completely.\\
+
+\item Correctness is when a software product satisfies the requirements. Reliability is when a software product does and functions just as it was intended to do or function. Robustness is when a software product behaves reasonably in unanticipated situations. When a product satisfies unstated requirements, the program is said to be robust.\\
+
+\item \textit{Separation of concerns} is the principle that different concerns should be isolated and considered separately. Its purpose is to reduce a complex problem into a set of simpler problem, and that way we may target each concern with a parallelization of effort. Modularity is when a complex system is divided into smaller parts called modules. Modularity allows us to enable the principle of separation of concerns so that different parts of a system are considered separately creating a more efficient way of designing a system.\\
+
+\end{enumerate}
+
+\newpage
+
+\lstset{language=Python, basicstyle=\tiny, breaklines=true, showspaces=false,
+  showstringspaces=false, breakatwhitespace=true}
+%\lstset{language=C,linewidth=.94\textwidth,xleftmargin=1.1cm}
+
+\def\thesection{\Alph{section}}
+
+\section{Code for date\_adt.py}
+
+\noindent \lstinputlisting{../src/date_adt.py}
+
+\newpage
+
+\section{Code for pos\_adt.py}
+
+\noindent \lstinputlisting{../src/pos_adt.py}
+
+\newpage
+
+\section{Code for test\_driver.py}
+
+\noindent \lstinputlisting{../src/test_driver.py}
+
+\newpage
+
+\section{Code for Partner's date\_adt.py}
+
+\noindent \lstinputlisting{../partner/date_adt.py}
+
+\newpage
+
+\section{Code for Partner's pos\_adt.py}
+
+\noindent \lstinputlisting{../partner/pos_adt.py}
+
+\newpage
+
+\section{Citations}
+
+\begin{itemize}
+
+\item https://raygun.com/blog/costly-software-errors-history/
+
+\item https://websiteseochecker.com/blog/what-is-timestamp/
+
+\item http://www.cs.toronto.edu/~sme/CSC302/notes/20-software-quality-1.pdf
+
+\item https://testpoint.com.au/11-ways-to-improve-software-quality/
+
+\end{itemize}
+
+\end {document}
